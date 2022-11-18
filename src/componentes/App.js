@@ -1,8 +1,8 @@
 import Corpo from "./Corpo";
 import Navbar from "./NavBar";
 
-export default function () {
-  return function App() {
+export default function App() {
+  
     return (
       <div class="root">
         <Navbar />
@@ -18,5 +18,5 @@ export default function () {
         </div>
       </div>
     );
-  };
+  
 }
