@@ -180,8 +180,28 @@ body {
   cursor: pointer;
 }
 
+.post .conteudo{
+  position: relative;
+}
+
 .post .conteudo img {
   width: 100%;
+}
+
+.post .conteudo .coracao{
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  height: 200px;
+  width: 200px;
+  transform: scale(0.2);
+  transition: scale 300;
+  
+}
+
+.post .conteudo .efeito{
+  transform: scale(1);
+
 }
 
 .post .fundo .acoes {
@@ -194,8 +214,14 @@ body {
 .post .fundo .acoes div:first-child ion-icon {
   margin-right: 6px;
   
+  
+  
 }
 
+.post .fundo .acoes div:first-child .red{
+  color: red;
+  
+}
 
 
 

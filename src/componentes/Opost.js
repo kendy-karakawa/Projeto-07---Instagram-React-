@@ -4,6 +4,7 @@ export default function Opost(props) {
   const [salvo, setSalvo] = useState("bookmark-outline");
   const [like, setLike] = useState("heart-outline");
   const [numeroLike, setNumerolike] = useState(10199);
+  const [color, setColor] =useState("")
 
   function salvar() {
     setSalvo("bookmark");
@@ -13,18 +14,21 @@ export default function Opost(props) {
     if (like === "heart") {
       setLike("heart-outline");
       setNumerolike(numeroLike - 1);
+      setColor("")
     } else {
-        addLike()
+      addLike();
     }
   }
 
-  function addLike(){
-    if(like === "heart-outline"){
-        setNumerolike(numeroLike + 1);
+  function addLike() {
+    if (like === "heart-outline") {
+      setNumerolike(numeroLike + 1);
     }
     setLike("heart");
-    
+    setColor("red")
   }
+
+
 
   return (
     <div className="post" data-test="post">
@@ -44,12 +48,14 @@ export default function Opost(props) {
           onDoubleClick={addLike}
           data-test="post-image"
         />
+        {/* <img className="coracao" src="assets/img/kiss.png" /> */}
       </div>
 
       <div className="fundo">
         <div className="acoes">
           <div>
             <ion-icon
+              class={color}  
               name={like}
               onClick={darLike}
               data-test="like-post"

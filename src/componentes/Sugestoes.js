@@ -15,7 +15,7 @@ export default function Sugestoes() {
         <div>Ver tudo</div>
       </div>
 
-      {listaSugestoes.map((l)=> <Sugestao lista={l}/>)}
+      {listaSugestoes.map((l)=> <Sugestao lista={l} key={l.img}/>)}
     </div>
   );
 }

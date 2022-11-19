@@ -10,7 +10,7 @@ export default function Post() {
   
   return (
     <div className="posts">
-      {posts.map((p)=><Opost posts={p} />)}
+      {posts.map((p)=><Opost posts={p} key={p.userName}/>)}
     </div>
   );
 }
