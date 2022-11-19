@@ -1,3 +1,5 @@
+import Sugestao from "./Sugestao";
+
 export default function Sugestoes() {
   const listaSugestoes = [
     {img:"assets/img/bad.vibes.memes.svg", nome:"bad.vibes.memes", razao:"Segue você"},
@@ -7,8 +9,8 @@ export default function Sugestoes() {
     {img:"assets/img/smallcutecats.svg", nome:"smallcutecats", razao:"Segue você"}
   ]
   return (
-    <div class="sugestoes">
-      <div class="titulo">
+    <div className="sugestoes">
+      <div className="titulo">
         Sugestões para você
         <div>Ver tudo</div>
       </div>
@@ -18,19 +20,4 @@ export default function Sugestoes() {
   );
 }
 
-function Sugestao(props){
-  return(
-    <div class="sugestao">
-        <div class="usuario">
-          <img src={props.lista.img} />
-          <div class="texto">
-            <div class="nome">{props.lista.nome}</div>
-            <div class="razao">{props.lista.razao}</div>
-          </div>
-        </div>
 
-        <div class="seguir">Seguir</div>
-      </div>
-
-  )
-}

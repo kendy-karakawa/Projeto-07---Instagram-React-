@@ -193,7 +193,11 @@ body {
 
 .post .fundo .acoes div:first-child ion-icon {
   margin-right: 6px;
+  
 }
+
+
+
 
 .post .fundo .curtidas {
   display: flex;
