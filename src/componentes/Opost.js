@@ -32,11 +32,12 @@ export default function Opost(props) {
     }
     setLike("heart");
     setColor("red");
-    ativarEfeito()
+    
     
   }
 
   function ativarEfeito(){
+    addLike()
     setId("")
     setTimeout(executarEfeito,300)
     
@@ -67,7 +68,7 @@ export default function Opost(props) {
       <div className="conteudo">
         <img
           src={props.posts.conteudo}
-          onDoubleClick={addLike}
+          onDoubleClick={ativarEfeito}
           data-test="post-image"
         />
         {/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */}
