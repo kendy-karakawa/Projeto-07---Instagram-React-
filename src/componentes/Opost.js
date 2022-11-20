@@ -5,6 +5,8 @@ export default function Opost(props) {
   const [like, setLike] = useState("heart-outline");
   const [numeroLike, setNumerolike] = useState(10199);
   const [color, setColor] = useState("");
+  const [efeito, setEfeito] = useState("coracao ");
+  const [id, setId] = useState("none")
 
   function salvar() {
     if (salvo === "bookmark") {
@@ -30,6 +32,24 @@ export default function Opost(props) {
     }
     setLike("heart");
     setColor("red");
+    ativarEfeito()
+    
+  }
+
+  function ativarEfeito(){
+    setId("")
+    setTimeout(executarEfeito,300)
+    
+  }
+
+  function executarEfeito(){
+    setEfeito(efeito + " efeito")
+    setTimeout(esconder,500)
+  }
+
+  function esconder(){
+    setId("none")
+    setEfeito("coracao ")
   }
 
   return (
@@ -50,7 +70,8 @@ export default function Opost(props) {
           onDoubleClick={addLike}
           data-test="post-image"
         />
-        {/* <img className="coracao" src="assets/img/kiss.png" /> */}
+        {/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */}
+        <img className={efeito} id={id} src="assets/img/kiss.png" />
       </div>
 
       <div className="fundo">
